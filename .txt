@@ -1,0 +1,11 @@
+future features to add here are the -- >
+3. Emergency Triage System (Ethics in AI) 🚑
+Add a simple "Severity of Pain (1-10)" slider to the booking form.
+
+If the user selects 8, 9, or 10, the app ignores the AI wait time predictions and immediately flashes a red warning telling them to go straight to the Emergency Ward.
+The Pitch: This shows you considered the ethical implications of AI and healthcare, proving the system won't make a dying patient wait 3 hours just for a "Green" slot.
+
+4. AI Symptom-to-Department Mappper 🗣️
+Instead of making the user manually choose "Cardiology" from a dropdown, add a text box that says: "Describe your problem".
+
+If they type "my chest is hurting heavily", we send that to the Python backend, which uses simple keyword matching (or NLP) to automatically auto-select the Cardiology department for them.
