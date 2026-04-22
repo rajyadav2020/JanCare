@@ -423,7 +423,10 @@ app.put('/api/admin/appointments/:id/status', adminProtect, async (req, res) => 
   }
 });
 
+// Keep listen() for local dev — Vercel ignores it and uses the export below
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+export default app;
 
