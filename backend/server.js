@@ -18,14 +18,12 @@ const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/hackathon_opd';
 const JWT_SECRET = process.env.JWT_SECRET || 'hackathon_secret_123';
 
-// Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'], // Restrict to your Vite Frontend
+  origin: process.env.FRONTEND_URL,
   credentials: true
 }));
 app.use(express.json());
 
-// Database connection (No strict checking to ensure speed for hackathon)
 mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB Connected to', MONGO_URI))
   .catch(err => console.error('MongoDB Connection Error:', err));
